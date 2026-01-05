@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chem Master Ghana - Solubility Lessons</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/wassce-logo.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-flask"></i>
+                <h1>Chem Master <span class="ghana">Ghana</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#lessons">Lessons</a>
+                <a href="#assessments">Assessments</a>
+                <a href="#glossary">Glossary</a>
+                <a href="#about">About</a>
+                <div class="auth-buttons">
+                    <button id="loginBtn" class="btn btn-outline">Login</button>
+                    <button id="signupBtn" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Authentication Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Chem Master</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" required placeholder="Enter your email">
+                    <div class="error-message" id="loginEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                    <div class="error-message" id="loginPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" id="showSignup">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Your Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required placeholder="Enter your full name">
+                    <div class="error-message" id="signupNameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" required placeholder="Enter your email">
+                    <div class="error-message" id="signupEmailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="Create a password (min. 8 characters)">
+                    <div class="error-message" id="signupPasswordError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+                    <div class="error-message" id="confirmPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                <p class="form-footer">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Master Chemistry with Ghanaian Context</h2>
+                <h1>Understanding <span class="highlight">Solubility</span></h1>
+                <p class="subtitle">Designed specifically for SHS students in Ghana preparing for WASSCE exams</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-book-open"></i>
+                        <span>6 Comprehensive Lessons</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clipboard-check"></i>
+                        <span>Practice Questions & Quizzes</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>WASSCE-Focused Content</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#lessons" class="btn btn-primary btn-large">
+                        <i class="fas fa-play-circle"></i> Start Learning
+                    </a>
+                    <a href="#assessments" class="btn btn-secondary btn-large">
+                        <i class="fas fa-file-alt"></i> Take Assessment
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="chemistry-animation">
+                    <div class="molecule"></div>
+                    <div class="beaker">
+                        <div class="liquid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lessons Section -->
+    <section id="lessons" class="lessons-section">
+        <div class="container">
+            <h2 class="section-title">Solubility Lessons</h2>
+            <p class="section-subtitle">Complete the lessons in order for the best learning experience</p>
+            
+            <div class="lessons-grid">
+                <!-- Lesson 1 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 1</div>
+                    <h3>What is Solubility?</h3>
+                    <p>Understanding the basic concepts of solute, solvent, and solution with everyday examples.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 15 min</span>
+                        <span class="tag"><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <a href="lessons/lesson1.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+
+                <!-- Lesson 2 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 2</div>
+                    <h3>"Like Dissolves Like" Rule</h3>
+                    <p>Learn about polarity and why oil and water don't mix.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 20 min</span>
+                        <span class="tag"><i class="fas fa-star"></i> Beginner</span>
+                    </div>
+                    <a href="lessons/lesson2.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+
+                <!-- Lesson 3 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 3</div>
+                    <h3>Factors Affecting Solubility</h3>
+                    <p>Temperature, pressure, and nature of substances - how they influence solubility.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 25 min</span>
+                        <span class="tag"><i class="fas fa-star-half-alt"></i> Intermediate</span>
+                    </div>
+                    <a href="lessons/lesson3.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+
+                <!-- Lesson 4 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 4</div>
+                    <h3>Saturated & Unsaturated Solutions</h3>
+                    <p>Understanding different types of solutions and solubility curves.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 20 min</span>
+                        <span class="tag"><i class="fas fa-star-half-alt"></i> Intermediate</span>
+                    </div>
+                    <a href="lessons/lesson4.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+
+                <!-- Lesson 5 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 5</div>
+                    <h3>Solubility Rules & Precipitation</h3>
+                    <p>Master the rules to predict when solids will form in solutions.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 30 min</span>
+                        <span class="tag"><i class="fas fa-star"></i> Advanced</span>
+                    </div>
+                    <a href="lessons/lesson5.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+
+                <!-- Lesson 6 -->
+                <div class="lesson-card">
+                    <div class="lesson-number">Lesson 6</div>
+                    <h3>Real-World Applications</h3>
+                    <p>From medicine to mining - see solubility in action in Ghanaian context.</p>
+                    <div class="lesson-tags">
+                        <span class="tag"><i class="fas fa-clock"></i> 25 min</span>
+                        <span class="tag"><i class="fas fa-star"></i> Advanced</span>
+                    </div>
+                    <a href="lessons/lesson6.html" class="btn btn-outline btn-block">Start Lesson</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessments Section -->
+    <section id="assessments" class="assessments-section">
+        <div class="container">
+            <h2 class="section-title">WASSCE Practice Assessments</h2>
+            <p class="section-subtitle">Test your knowledge with these exam-style questions</p>
+            
+            <div class="assessments-grid">
+                <div class="assessment-card">
+                    <div class="assessment-header">
+                        <h3>Assessment Test 1</h3>
+                        <span class="badge">Lessons 1-3</span>
+                    </div>
+                    <p>10 questions covering basic concepts, polarity, and factors affecting solubility.</p>
+                    <div class="assessment-info">
+                        <span><i class="fas fa-question-circle"></i> 10 Questions</span>
+                        <span><i class="fas fa-clock"></i> 20 minutes</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="startAssessment(1)">Start Assessment</button>
+                </div>
+
+                <div class="assessment-card">
+                    <div class="assessment-header">
+                        <h3>Assessment Test 2</h3>
+                        <span class="badge">Lessons 4-6</span>
+                    </div>
+                    <p>10 questions on solution types, solubility rules, and practical applications.</p>
+                    <div class="assessment-info">
+                        <span><i class="fas fa-question-circle"></i> 10 Questions</span>
+                        <span><i class="fas fa-clock"></i> 25 minutes</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="startAssessment(2)">Start Assessment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glossary Section -->
+    <section id="glossary" class="glossary-section">
+        <div class="container">
+            <h2 class="section-title">Chemistry Glossary</h2>
+            <p class="section-subtitle">15 key terms you must know for WASSCE</p>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="glossarySearch" placeholder="Search for a term...">
+            </div>
+            
+            <div class="glossary-grid" id="glossaryList">
+                <!-- Glossary terms will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    <!-- Answers Section -->
+<section id="answers" class="answers-section" style="display: none;">
+    <div class="container">
+        <h2 class="section-title">Assessment Answers & Explanations</h2>
+        <p class="section-subtitle">Review correct answers with detailed explanations</p>
+        
+        <div class="answers-tabs">
+            <button class="tab-btn active" onclick="showAnswers(1)">Assessment 1 Answers</button>
+            <button class="tab-btn" onclick="showAnswers(2)">Assessment 2 Answers</button>
+        </div>
+        
+        <div id="answersContent" class="answers-content">
+            <!-- Answers will be loaded here -->
+        </div>
+    </div>
+</section>
+
+<style>
+    .answers-section {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    }
+    
+    .answers-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 40px 0;
+    }
+    
+    .tab-btn {
+        padding: 12px 30px;
+        background: white;
+        border: 2px solid var(--primary-color);
+        border-radius: 30px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    
+    .tab-btn.active {
+        background: var(--primary-color);
+        color: white;
+    }
+    
+    .tab-btn:hover:not(.active) {
+        background: var(--gray-light);
+    }
+    
+    .answers-content {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .question-answer {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--gray-light);
+    }
+    
+    .question-answer:last-child {
+        border-bottom: none;
+    }
+    
+    .question-answer h3 {
+        color: var(--primary-dark);
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .question-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+    }
+    
+    .answer-box {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 15px 0;
+        border-left: 4px solid var(--success-color);
+    }
+    
+    .explanation-box {
+        background: #e8f4f8;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid var(--accent-color);
+    }
+    
+    .wassce-tip-box {
+        background: #fff3cd;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+        border-left: 4px solid #ffc107;
+    }
+</style>
+
+<script>
+    // Answers Data
+    const assessmentAnswers = {
+        1: [
+            {
+                question: "Define solute and solvent with examples.",
+                answer: "Solute: The substance that gets dissolved (e.g., sugar, salt, Milo powder). Solvent: The substance that does the dissolving (e.g., water, palm oil, petrol). A solution is a homogeneous mixture of both.",
+                explanation: "This fundamental concept is crucial. Remember: The solute is usually present in smaller quantity, but what matters is that it gets dissolved. Water is called the 'universal solvent' because it dissolves many substances.",
+                wassceTip: "In WASSCE, always give specific examples when asked to define terms. Use Ghanaian examples like 'sugar in tea' or 'salt in stew'."
+            },
+            {
+                question: "Why doesn't vegetable oil dissolve in water?",
+                answer: "Water is polar, vegetable oil is non-polar. According to the 'like dissolves like' rule, polar substances dissolve in polar solvents, and non-polar in non-polar.",
+                explanation: "Water molecules have positive and negative ends (polar), while oil molecules have no charged ends (non-polar). Their different polarities prevent mixing.",
+                wassceTip: "Always mention 'polarity' and the 'like dissolves like' rule in such explanations for full marks."
+            }
+            // Add all 10 questions...
+        ],
+        2: [
+            // Assessment 2 answers here
+        ]
+    };
+
+    function showAnswers(assessmentNumber) {
+        // Update active tab
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+        
+        // Show answers content
+        const answers = assessmentAnswers[assessmentNumber];
+        let html = `<h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-dark);">
+                        Assessment ${assessmentNumber} - Complete Answers
+                    </h3>`;
+        
+        answers.forEach((item, index) => {
+            html += `
+                <div class="question-answer">
+                    <h3><span class="question-number">${index + 1}</span> ${item.question}</h3>
+                    <div class="answer-box">
+                        <strong><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Correct Answer:</strong>
+                        <p style="margin-top: 8px;">${item.answer}</p>
+                    </div>
+                    <div class="explanation-box">
+                        <strong><i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> Explanation:</strong>
+                        <p style="margin-top: 8px;">${item.explanation}</p>
+                    </div>
+                    <div class="wassce-tip-box">
+                        <strong><i class="fas fa-graduation-cap" style="color: #856404;"></i> WASSCE Tip:</strong>
+                        <p style="margin-top: 8px;">${item.wassceTip}</p>
+                    </div>
+                </div>
+            `;
+        });
+        
+        document.getElementById('answersContent').innerHTML = html;
+        document.getElementById('answers').style.display = 'block';
+        
+        // Scroll to answers section
+        document.getElementById('answers').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Add link to answers in navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelector('.nav-links');
+        const answersLink = document.createElement('a');
+        answersLink.href = '#answers';
+        answersLink.textContent = 'Answers';
+        answersLink.onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('answers').style.display = 'block';
+            showAnswers(1);
+            window.scrollTo({ top: document.getElementById('answers').offsetTop - 70, behavior: 'smooth' });
+        };
+        
+        // Insert before About link
+        const aboutLink = document.querySelector('a[href="#about"]');
+        aboutLink.parentNode.insertBefore(answersLink, aboutLink);
+    });
+</script>
+
+    <!-- Footer -->
+    <footer id="about" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chem Master Ghana</h3>
+                    <p>Providing quality chemistry education for SHS students in Ghana since 2026.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#lessons">Lessons</a></li>
+                        <li><a href="#assessments">Assessments</a></li>
+                        <li><a href="#glossary">Glossary</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>WASSCE Resources</h4>
+                    <ul>
+                        <li><a href="#">Past Questions</a></li>
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Exam Schedule</a></li>
+                        <li><a href="#">Marking Schemes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> ayekebright7@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +233 53 395 7187</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Accra, Ghana</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chem Master Ghana. All rights reserved. Designed specifically for WASSCE preparation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

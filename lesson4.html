@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Saturated & Unsaturated Solutions | Chem Master Ghana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .solubility-curve {
+            background: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            height: 300px;
+        }
+        .curve-axis {
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+            width: 80%;
+            height: 80%;
+            border-left: 2px solid #333;
+            border-bottom: 2px solid #333;
+        }
+        .curve-point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            transform: translate(-50%, 50%);
+        }
+        .curve-label {
+            position: absolute;
+            font-size: 12px;
+            color: var(--gray-dark);
+        }
+        .solution-types {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        .solution-type {
+            flex: 1;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .unsaturated { background: #e8f5e8; border: 2px solid #2ecc71; }
+        .saturated { background: #fff3cd; border: 2px solid #f39c12; }
+        .supersaturated { background: #f8d7da; border: 2px solid #e74c3c; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-flask"></i>
+                <h1>Chem Master <span class="ghana">Ghana</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#lessons">Lessons</a>
+                <a href="../index.html#assessments">Assessments</a>
+                <a href="../index.html#glossary">Glossary</a>
+                <div class="auth-buttons" id="authButtons"></div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <div class="lesson-breadcrumb">
+                <a href="../index.html#lessons"><i class="fas fa-arrow-left"></i> Back to Lessons</a>
+            </div>
+            <div class="lesson-title">
+                <span class="lesson-number">Lesson 4</span>
+                <h1>Saturated, Unsaturated & Supersaturated Solutions</h1>
+                <p class="lesson-subtitle">Understanding different types of solutions and solubility curves</p>
+            </div>
+            <div class="lesson-meta">
+                <span><i class="fas fa-clock"></i> 20 minutes</span>
+                <span><i class="fas fa-graduation-cap"></i> Intermediate Level</span>
+                <span><i class="fas fa-book"></i> WASSCE Topic: Types of Solutions</span>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <section class="explanation-section">
+                <div class="section-header">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2>Teacher's Explanation</h2>
+                </div>
+                <div class="teacher-note">
+                    <p>"Imagine adding sugar to tea. At first it all dissolves (unsaturated). Keep adding and eventually some sugar stays at the bottom (saturated). But there's a tricky third type we can create in the lab - supersaturated solutions that are unstable!"</p>
+                </div>
+                
+                <div class="real-life-example">
+                    <h3><i class="fas fa-lightbulb"></i> Making Sugar Syrup</h3>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <i class="fas fa-candy-cane"></i>
+                        </div>
+                        <div class="example-text">
+                            <h4>Making Ghanaian Sugar Syrup</h4>
+                            <p>When making sugar syrup for sobolo, you can dissolve a lot of sugar in hot water. As it cools, the solution becomes supersaturated. If you add a sugar crystal (seed), all the excess sugar crystallizes at once - this is how rock candy is made!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="concepts-section">
+                <div class="section-header">
+                    <i class="fas fa-key"></i>
+                    <h2>Three Types of Solutions</h2>
+                </div>
+                
+                <div class="solution-types">
+                    <div class="solution-type unsaturated">
+                        <h3><i class="fas fa-plus-circle"></i> Unsaturated</h3>
+                        <p><strong>Can dissolve more solute</strong></p>
+                        <p>All solute particles are dissolved</p>
+                        <p>Clear solution, no solid at bottom</p>
+                        <p><em>Example: Tea with little sugar</em></p>
+                    </div>
+                    
+                    <div class="solution-type saturated">
+                        <h3><i class="fas fa-balance-scale"></i> Saturated</h3>
+                        <p><strong>Maximum solute dissolved</strong></p>
+                        <p>Dissolution rate = crystallization rate</p>
+                        <p>Solid may be visible at bottom</p>
+                        <p><em>Example: Tea with max sugar</em></p>
+                    </div>
+                    
+                    <div class="solution-type supersaturated">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Supersaturated</h3>
+                        <p><strong>More solute than normal</strong></p>
+                        <p>Unstable - will crystallize suddenly</p>
+                        <p>Created by cooling saturated solution</p>
+                        <p><em>Example: Rock candy solution</em></p>
+                    </div>
+                </div>
+                
+                <div class="important-note">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p><strong>Remember:</strong> A saturated solution at a higher temperature becomes supersaturated when cooled slowly without disturbance. Adding a seed crystal causes instant crystallization!</p>
+                </div>
+            </section>
+
+            <section class="diagram-section">
+                <div class="section-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Solubility Curves</h2>
+                </div>
+                
+                <div class="diagram-container">
+                    <div class="solubility-curve">
+                        <div class="curve-axis">
+                            <!-- X-axis label -->
+                            <div class="curve-label" style="bottom: -30px; left: 0%;">0°C</div>
+                            <div class="curve-label" style="bottom: -30px; left: 25%;">25°C</div>
+                            <div class="curve-label" style="bottom: -30px; left: 50%;">50°C</div>
+                            <div class="curve-label" style="bottom: -30px; left: 75%;">75°C</div>
+                            <div class="curve-label" style="bottom: -30px; left: 100%;">100°C</div>
+                            
+                            <!-- Y-axis label -->
+                            <div class="curve-label" style="bottom: 0%; left: -40px;">0g</div>
+                            <div class="curve-label" style="bottom: 25%; left: -40px;">25g</div>
+                            <div class="curve-label" style="bottom: 50%; left: -40px;">50g</div>
+                            <div class="curve-label" style="bottom: 75%; left: -40px;">75g</div>
+                            <div class="curve-label" style="bottom: 100%; left: -40px;">100g</div>
+                            
+                            <!-- Curve points -->
+                            <div class="curve-point" style="left: 0%; bottom: 10%;"></div>
+                            <div class="curve-point" style="left: 25%; bottom: 25%;"></div>
+                            <div class="curve-point" style="left: 50%; bottom: 45%;"></div>
+                            <div class="curve-point" style="left: 75%; bottom: 70%;"></div>
+                            <div class="curve-point" style="left: 100%; bottom: 100%;"></div>
+                            
+                            <!-- Saturation line -->
+                            <div style="position: absolute; left: 50%; bottom: 45%; width: 2px; height: 45%; background: #f39c12; opacity: 0.5;"></div>
+                            <div style="position: absolute; left: 50%; bottom: 45%; width: 50%; height: 2px; background: #f39c12; opacity: 0.5;"></div>
+                            <div class="curve-label" style="left: 50%; bottom: 45%; color: #f39c12; font-weight: bold;">Saturation Point (50°C, 45g)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="curve-explanation">
+                        <h4>How to Read a Solubility Curve</h4>
+                        <ul>
+                            <li><strong>X-axis:</strong> Temperature (°C)</li>
+                            <li><strong>Y-axis:</strong> Solubility (grams solute/100g water)</li>
+                            <li><strong>Below the curve:</strong> Unsaturated solution</li>
+                            <li><strong>On the curve:</strong> Saturated solution</li>
+                            <li><strong>Above the curve:</strong> Supersaturated solution</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-section">
+                <div class="section-header">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h2>Practice Questions</h2>
+                </div>
+                
+                <div class="questions-container">
+                    <div class="question">
+                        <h4>Question 1: What is a saturated solution?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                Solution that can dissolve more solute
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                <strong>Solution with maximum dissolved solute</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                Solution with no solute
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 2: How can you make an unsaturated solution saturated?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Add more solvent
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                <strong>Add more solute until no more dissolves</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Cool the solution
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 3: True or False: A supersaturated solution is stable.</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                True
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                <strong>False</strong>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 4: Where on a solubility curve is the saturation point?</h4>
+                        <textarea placeholder="Your answer... (Example: On the curve line)"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 5: What happens if you add one more crystal to a supersaturated solution?</h4>
+                        <textarea placeholder="Your answer..."></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="checkAnswers(4)">
+                        <i class="fas fa-check-circle"></i> Check Your Answers
+                    </button>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <div class="section-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>Quick Quiz</h2>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-timer">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Time: <span id="quizTimer">05:00</span></span>
+                    </div>
+                    
+                    <form id="lessonQuiz">
+                        <div class="quiz-question">
+                            <h4>1. Differentiate between saturated and unsaturated solutions.</h4>
+                            <textarea name="quiz1" placeholder="Your explanation..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>2. How is a supersaturated solution created?</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz2" value="a">
+                                    By heating an unsaturated solution
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="b">
+                                    <strong>By cooling a saturated solution slowly</strong>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="c">
+                                    By adding more solvent
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>3. What visual clue indicates a saturated solution?</h4>
+                            <textarea name="quiz3" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>4. On a solubility curve, what does a point above the curve represent?</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz4" value="a">
+                                    Unsaturated solution
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz4" value="b">
+                                    Saturated solution
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz4" value="c">
+                                    <strong>Supersaturated solution</strong>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Quiz
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="recap-section">
+                <div class="section-header">
+                    <i class="fas fa-bookmark"></i>
+                    <h2>Lesson Recap</h2>
+                </div>
+                
+                <div class="recap-content">
+                    <div class="key-points">
+                        <h3>Key Points to Remember:</h3>
+                        <ul>
+                            <li><strong>Unsaturated:</strong> "Room for more" solute</li>
+                            <li><strong>Saturated:</strong> "Completely full" - equilibrium state</li>
+                            <li><strong>Supersaturated:</strong> "Overfull" - unstable and will crystallize</li>
+                            <li>Solubility curves show how much dissolves at different temperatures</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="wassce-tip">
+                        <h3><i class="fas fa-graduation-cap"></i> WASSCE Tip</h3>
+                        <p>When describing saturation, always mention that in a saturated solution, the rate of dissolution equals the rate of crystallization. This shows you understand dynamic equilibrium.</p>
+                    </div>
+                    
+                    <div class="next-lesson">
+                        <h3>Ready for the Next Lesson?</h3>
+                        <p>In Lesson 5, we'll master solubility rules and learn to predict when precipitation occurs - crucial for WASSCE practical exams!</p>
+                        <a href="lesson5.html" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i> Continue to Lesson 5
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <script src="../auth.js"></script>
+    <script>
+        function checkAnswers(lessonNumber) {
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'b'
+            };
+            
+            let score = 0;
+            
+            Object.keys(correctAnswers).forEach(q => {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === correctAnswers[q]) {
+                    score++;
+                    selected.parentElement.style.color = 'var(--success-color)';
+                    selected.parentElement.style.fontWeight = 'bold';
+                } else if (selected) {
+                    selected.parentElement.style.color = 'var(--danger-color)';
+                }
+            });
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                trackLessonProgress(lessonNumber);
+            }
+            
+            alert(`You got ${score} out of 3 multiple choice questions correct!`);
+        }
+        
+        let quizTime = 300;
+        const timerElement = document.getElementById('quizTimer');
+        
+        function updateQuizTimer() {
+            const minutes = Math.floor(quizTime / 60);
+            const seconds = quizTime % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (quizTime > 0) {
+                quizTime--;
+            } else {
+                alert('Time\'s up! Please submit your quiz.');
+            }
+        }
+        
+        setInterval(updateQuizTimer, 1000);
+        
+        document.getElementById('lessonQuiz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                alert('Please login to save your quiz results!');
+                return;
+            }
+            
+            const quizData = new FormData(this);
+            console.log('Quiz submitted:', Object.fromEntries(quizData));
+            
+            alert('Quiz submitted successfully! Your answers have been saved.');
+            
+            trackLessonProgress(4);
+            
+            setTimeout(() => {
+                window.location.href = 'lesson5.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

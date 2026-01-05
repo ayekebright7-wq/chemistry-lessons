@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Solubility Rules & Precipitation | Chem Master Ghana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .solubility-rules {
+            background: #e8f4f8;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .rule-category {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .soluble { color: var(--success-color); }
+        .insoluble { color: var(--danger-color); }
+        .precipitation-demo {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .solution-container {
+            text-align: center;
+        }
+        .solution {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--gray-medium);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .clear-solution { background: #e3f2fd; }
+        .precipitate { background: #ffebee; }
+        .plus-sign {
+            font-size: 2rem;
+            color: var(--gray-dark);
+            margin: 0 20px;
+        }
+        .arrow {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-flask"></i>
+                <h1>Chem Master <span class="ghana">Ghana</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#lessons">Lessons</a>
+                <a href="../index.html#assessments">Assessments</a>
+                <a href="../index.html#glossary">Glossary</a>
+                <div class="auth-buttons" id="authButtons"></div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <div class="lesson-breadcrumb">
+                <a href="../index.html#lessons"><i class="fas fa-arrow-left"></i> Back to Lessons</a>
+            </div>
+            <div class="lesson-title">
+                <span class="lesson-number">Lesson 5</span>
+                <h1>Solubility Rules & Predicting Precipitation</h1>
+                <p class="lesson-subtitle">Master the rules to predict when solids will form in solutions</p>
+            </div>
+            <div class="lesson-meta">
+                <span><i class="fas fa-clock"></i> 30 minutes</span>
+                <span><i class="fas fa-graduation-cap"></i> Advanced Level</span>
+                <span><i class="fas fa-book"></i> WASSCE Topic: Precipitation Reactions</span>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <section class="explanation-section">
+                <div class="section-header">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2>Teacher's Explanation</h2>
+                </div>
+                <div class="teacher-note">
+                    <p>"When two solutions mix, sometimes they stay clear, sometimes a solid forms (precipitate). Chemists have rules to predict this - crucial for WASSCE exams! Learn these rules and you'll be able to predict chemical reactions like a pro."</p>
+                </div>
+                
+                <div class="real-life-example">
+                    <h3><i class="fas fa-lightbulb"></i> Lab Demonstration</h3>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="example-text">
+                            <h4>The "Golden Rain" Experiment</h4>
+                            <p>In chemistry labs, when lead nitrate solution mixes with potassium iodide solution, a beautiful yellow precipitate of lead iodide forms instantly. This is a classic precipitation reaction that follows the solubility rules you'll learn today.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="concepts-section">
+                <div class="section-header">
+                    <i class="fas fa-key"></i>
+                    <h2>Essential Solubility Rules</h2>
+                </div>
+                
+                <div class="solubility-rules">
+                    <div class="rule-category">
+                        <h3><i class="fas fa-check-circle soluble"></i> Always Soluble (Memorize These!)</h3>
+                        <ul>
+                            <li><strong>All Group 1 (Alkali metal) compounds:</strong> Li⁺, Na⁺, K⁺, etc.</li>
+                            <li><strong>All ammonium (NH₄⁺) compounds</strong></li>
+                            <li><strong>All nitrates (NO₃⁻)</strong> - e.g., KNO₃, NaNO₃</li>
+                            <li><strong>All acetates (CH₃COO⁻)</strong></li>
+                            <li><strong>Most chlorides (Cl⁻)</strong> - except AgCl, PbCl₂, Hg₂Cl₂</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-category">
+                        <h3><i class="fas fa-times-circle insoluble"></i> Generally Insoluble (Exceptions Exist)</h3>
+                        <ul>
+                            <li><strong>Most carbonates (CO₃²⁻):</strong> Except Group 1 and NH₄⁺</li>
+                            <li><strong>Most phosphates (PO₄³⁻):</strong> Except Group 1 and NH₄⁺</li>
+                            <li><strong>Most sulfides (S²⁻):</strong> Except Group 1, 2, and NH₄⁺</li>
+                            <li><strong>Most hydroxides (OH⁻):</strong> Except Group 1, Ba²⁺, Sr²⁺, Ca²⁺</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-category">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Important Exceptions to Remember</h3>
+                        <ul>
+                            <li><strong>AgCl, PbCl₂:</strong> Insoluble chlorides</li>
+                            <li><strong>BaSO₄, PbSO₄, CaSO₄:</strong> Insoluble sulfates</li>
+                            <li><strong>AgBr, AgI:</strong> Insoluble silver halides</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="important-note">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p><strong>Memory Tip:</strong> "PMS" - Pb²⁺, Ag⁺, Hg²⁺ form insoluble chlorides. Also remember "CASH" - Ca²⁺, Ag⁺, Sr²⁺, Ba²⁺, Pb²⁺ sulfates are mostly insoluble.</p>
+                </div>
+            </section>
+
+            <section class="diagram-section">
+                <div class="section-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Precipitation Reaction Demo</h2>
+                </div>
+                
+                <div class="diagram-container">
+                    <div class="precipitation-demo">
+                        <div class="solution-container">
+                            <h4>Silver Nitrate Solution</h4>
+                            <div class="solution clear-solution">AgNO₃(aq)</div>
+                            <p>Clear solution</p>
+                        </div>
+                        
+                        <div class="plus-sign">+</div>
+                        
+                        <div class="solution-container">
+                            <h4>Sodium Chloride Solution</h4>
+                            <div class="solution clear-solution">NaCl(aq)</div>
+                            <p>Clear solution</p>
+                        </div>
+                        
+                        <div class="arrow">→</div>
+                        
+                        <div class="solution-container">
+                            <h4>After Mixing</h4>
+                            <div class="solution precipitate">
+                                <i class="fas fa-cloud-rain"></i>
+                            </div>
+                            <p>White precipitate forms</p>
+                            <p><strong>AgCl(s) + NaNO₃(aq)</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="reaction-explanation">
+                        <h4>Ionic Equation for the Reaction</h4>
+                        <div class="equation-box">
+                            <p><strong>Full equation:</strong> AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)</p>
+                            <p><strong>Ionic equation:</strong> Ag⁺(aq) + NO₃⁻(aq) + Na⁺(aq) + Cl⁻(aq) → AgCl(s) + Na⁺(aq) + NO₃⁻(aq)</p>
+                            <p><strong>Net ionic equation:</strong> Ag⁺(aq) + Cl⁻(aq) → AgCl(s)</p>
+                        </div>
+                        <p class="explanation">The net ionic equation shows only the ions that actually react to form the precipitate. Spectator ions (Na⁺ and NO₃⁻) are cancelled out.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-section">
+                <div class="section-header">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h2>Practice Questions</h2>
+                </div>
+                
+                <div class="questions-container">
+                    <div class="question">
+                        <h4>Question 1: Are all sodium compounds soluble?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                <strong>Yes</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 2: What precipitate forms when AgNO₃ + NaCl mix?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                NaNO₃
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                <strong>AgCl</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                AgNO₃
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 3: Is PbSO₄ soluble in water?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                Yes
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                <strong>No</strong>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 4: Which is insoluble: KNO₃ or BaSO₄?</h4>
+                        <textarea placeholder="Your answer... (Example: BaSO₄ is insoluble)"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 5: Why does precipitation occur?</h4>
+                        <textarea placeholder="Your answer..."></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="checkAnswers(5)">
+                        <i class="fas fa-check-circle"></i> Check Your Answers
+                    </button>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <div class="section-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>Quick Quiz</h2>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-timer">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Time: <span id="quizTimer">07:00</span></span>
+                    </div>
+                    
+                    <form id="lessonQuiz">
+                        <div class="quiz-question">
+                            <h4>1. State two solubility rules for nitrates and chlorides.</h4>
+                            <textarea name="quiz1" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>2. Predict if precipitate forms: Na₂SO₄(aq) + BaCl₂(aq) →</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz2" value="a">
+                                    No precipitate - clear solution
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="b">
+                                    <strong>Yes - BaSO₄ precipitate forms</strong>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="c">
+                                    Yes - NaCl precipitate forms
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>3. Name one insoluble chloride compound.</h4>
+                            <textarea name="quiz3" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>4. Write the net ionic equation for: Pb(NO₃)₂(aq) + 2KI(aq) →</h4>
+                            <textarea name="quiz4" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Quiz
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="recap-section">
+                <div class="section-header">
+                    <i class="fas fa-bookmark"></i>
+                    <h2>Lesson Recap</h2>
+                </div>
+                
+                <div class="recap-content">
+                    <div class="key-points">
+                        <h3>Key Points to Remember:</h3>
+                        <ul>
+                            <li><strong>Group 1 and NH₄⁺ compounds:</strong> Always soluble</li>
+                            <li><strong>Nitrates and acetates:</strong> Always soluble</li>
+                            <li><strong>Most chlorides soluble:</strong> Except Ag⁺, Pb²⁺, Hg₂²⁺</li>
+                            <li><strong>Most sulfates soluble:</strong> Except Ba²⁺, Pb²⁺, Ca²⁺</li>
+                            <li><strong>Precipitation occurs</strong> when insoluble product forms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="wassce-tip">
+                        <h3><i class="fas fa-graduation-cap"></i> WASSCE Tip</h3>
+                        <p>In practical exams, if you see a white precipitate when mixing solutions, think: AgCl, BaSO₄, or CaCO₃. Yellow precipitate = PbI₂ or AgI. Memorize the colors of common precipitates!</p>
+                    </div>
+                    
+                    <div class="next-lesson">
+                        <h3>Final Lesson Next!</h3>
+                        <p>In our final lesson, we'll explore real-world applications of solubility in Ghana - from medicine to mining. See how chemistry works in our daily lives!</p>
+                        <a href="lesson6.html" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i> Continue to Final Lesson
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <script src="../auth.js"></script>
+    <script>
+        function checkAnswers(lessonNumber) {
+            const correctAnswers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'b'
+            };
+            
+            let score = 0;
+            
+            Object.keys(correctAnswers).forEach(q => {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === correctAnswers[q]) {
+                    score++;
+                    selected.parentElement.style.color = 'var(--success-color)';
+                    selected.parentElement.style.fontWeight = 'bold';
+                } else if (selected) {
+                    selected.parentElement.style.color = 'var(--danger-color)';
+                }
+            });
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                trackLessonProgress(lessonNumber);
+            }
+            
+            alert(`You got ${score} out of 3 multiple choice questions correct!`);
+        }
+        
+        let quizTime = 420;
+        const timerElement = document.getElementById('quizTimer');
+        
+        function updateQuizTimer() {
+            const minutes = Math.floor(quizTime / 60);
+            const seconds = quizTime % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (quizTime > 0) {
+                quizTime--;
+            } else {
+                alert('Time\'s up! Please submit your quiz.');
+            }
+        }
+        
+        setInterval(updateQuizTimer, 1000);
+        
+        document.getElementById('lessonQuiz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                alert('Please login to save your quiz results!');
+                return;
+            }
+            
+            const quizData = new FormData(this);
+            console.log('Quiz submitted:', Object.fromEntries(quizData));
+            
+            alert('Quiz submitted successfully! Your answers have been saved.');
+            
+            trackLessonProgress(5);
+            
+            setTimeout(() => {
+                window.location.href = 'lesson6.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

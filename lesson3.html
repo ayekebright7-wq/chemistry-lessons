@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Factors Affecting Solubility | Chem Master Ghana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .temperature-demo {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .hot-beaker, .cold-beaker {
+            text-align: center;
+        }
+        .beaker-visual {
+            width: 100px;
+            height: 150px;
+            border: 3px solid var(--primary-color);
+            border-radius: 0 0 20px 20px;
+            margin: 0 auto 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hot-liquid {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 80%;
+            background: linear-gradient(to top, #ff6b6b, #ff8e8e);
+        }
+        .cold-liquid {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, #4d96ff, #6bc5ff);
+        }
+        .solute-particles {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .solute-particle {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-flask"></i>
+                <h1>Chem Master <span class="ghana">Ghana</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#lessons">Lessons</a>
+                <a href="../index.html#assessments">Assessments</a>
+                <a href="../index.html#glossary">Glossary</a>
+                <div class="auth-buttons" id="authButtons"></div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <div class="lesson-breadcrumb">
+                <a href="../index.html#lessons"><i class="fas fa-arrow-left"></i> Back to Lessons</a>
+            </div>
+            <div class="lesson-title">
+                <span class="lesson-number">Lesson 3</span>
+                <h1>Factors Affecting Solubility</h1>
+                <p class="lesson-subtitle">Temperature, pressure, and the nature of substances</p>
+            </div>
+            <div class="lesson-meta">
+                <span><i class="fas fa-clock"></i> 25 minutes</span>
+                <span><i class="fas fa-graduation-cap"></i> Intermediate Level</span>
+                <span><i class="fas fa-book"></i> WASSCE Topic: Factors Affecting Solubility</span>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <section class="explanation-section">
+                <div class="section-header">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2>Teacher's Explanation</h2>
+                </div>
+                <div class="teacher-note">
+                    <p>"Have you noticed sugar dissolves faster in hot tea than in cold water? Or that you can dissolve more salt in hot water? And why do fizzy drinks lose their fizz when warm? This lesson explores the three main factors that control solubility."</p>
+                </div>
+                
+                <div class="real-life-example">
+                    <h3><i class="fas fa-lightbulb"></i> Ghanaian Market Example</h3>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                        <div class="example-text">
+                            <h4>Soda Drinks at the Market</h4>
+                            <p>When you buy a cold Fanta from the fridge at a Ghanaian shop, it's very fizzy. But if you leave it in the sun, it goes flat quickly. Why? Because cold liquids can hold more carbon dioxide gas. Also, the sealed bottle keeps the gas dissolved under pressure.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="concepts-section">
+                <div class="section-header">
+                    <i class="fas fa-key"></i>
+                    <h2>The Three Main Factors</h2>
+                </div>
+                
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <h3>Temperature</h3>
+                        <p>Affects how much solute can dissolve.</p>
+                        <div class="examples">
+                            <strong>Effects:</strong>
+                            <ul>
+                                <li><strong>For solids:</strong> Higher temperature = More solubility</li>
+                                <li><strong>For gases:</strong> Higher temperature = Less solubility</li>
+                                <li><strong>Ghanaian example:</strong> More sugar dissolves in hot porridge</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-weight-hanging"></i>
+                        </div>
+                        <h3>Pressure</h3>
+                        <p>Only affects gases in liquids.</p>
+                        <div class="examples">
+                            <strong>Effects:</strong>
+                            <ul>
+                                <li>Higher pressure = More gas dissolves</li>
+                                <li>Lower pressure = Gas escapes</li>
+                                <li><strong>Example:</strong> Soda bottles are sealed under pressure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Nature of Substances</h3>
+                        <p>Based on polarity (from Lesson 2).</p>
+                        <div class="examples">
+                            <strong>Remember:</strong>
+                            <ul>
+                                <li>Polar dissolves polar</li>
+                                <li>Non-polar dissolves non-polar</li>
+                                <li><strong>Example:</strong> Salt (polar) dissolves in water (polar)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="diagram-section">
+                <div class="section-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Temperature Effect Demonstration</h2>
+                </div>
+                
+                <div class="diagram-container">
+                    <div class="temperature-demo">
+                        <div class="hot-beaker">
+                            <h4>Hot Water</h4>
+                            <div class="beaker-visual">
+                                <div class="hot-liquid"></div>
+                                <div class="solute-particles">
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                </div>
+                            </div>
+                            <p>Many solute particles dissolved</p>
+                        </div>
+                        
+                        <div class="cold-beaker">
+                            <h4>Cold Water</h4>
+                            <div class="beaker-visual">
+                                <div class="cold-liquid"></div>
+                                <div class="solute-particles">
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                    <div class="solute-particle"></div>
+                                </div>
+                            </div>
+                            <p>Fewer solute particles dissolved</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pressure-demo">
+                        <h4>Pressure Effect on Gases</h4>
+                        <div class="comparison">
+                            <div class="high-pressure">
+                                <h5>High Pressure (Sealed Bottle)</h5>
+                                <p>✓ More CO₂ dissolved in soda</p>
+                                <p>✓ Very fizzy when opened</p>
+                            </div>
+                            <div class="low-pressure">
+                                <h5>Low Pressure (Opened Bottle)</h5>
+                                <p>✗ CO₂ gas escapes</p>
+                                <p>✗ Drink goes flat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-section">
+                <div class="section-header">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h2>Practice Questions</h2>
+                </div>
+                
+                <div class="questions-container">
+                    <div class="question">
+                        <h4>Question 1: How does increasing temperature affect solid solubility?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                Decreases solubility
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                <strong>Increases solubility</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                No effect
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 2: Why do fizzy drinks go flat when opened?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Temperature changes
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                <strong>Pressure decreases, gas escapes</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Sugar crystallizes
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 3: Which dissolves more oxygen: cold river or warm bath?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q3" value="a">
+                                <strong>Cold river</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="b">
+                                Warm bath
+                            </label>
+                            <label>
+                                <input type="radio" name="q3" value="c">
+                                Same amount
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 4: How does pressure affect gas solubility?</h4>
+                        <textarea placeholder="Your answer... (Example: Higher pressure increases gas solubility)"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 5: Why do cooks use hot water to make stock cubes dissolve?</h4>
+                        <textarea placeholder="Your answer..."></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="checkAnswers(3)">
+                        <i class="fas fa-check-circle"></i> Check Your Answers
+                    </button>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <div class="section-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>Quick Quiz</h2>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-timer">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Time: <span id="quizTimer">06:00</span></span>
+                    </div>
+                    
+                    <form id="lessonQuiz">
+                        <div class="quiz-question">
+                            <h4>1. Name the three factors affecting solubility.</h4>
+                            <textarea name="quiz1" placeholder="List the three factors..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>2. What happens to gas solubility when temperature increases?</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz2" value="a">
+                                    Increases
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="b">
+                                    <strong>Decreases</strong>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="c">
+                                    Stays the same
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>3. Why are soda bottles sealed tightly?</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz3" value="a">
+                                    To keep them cold
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz3" value="b">
+                                    <strong>To maintain pressure and keep CO₂ dissolved</strong>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz3" value="c">
+                                    To prevent evaporation
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>4. Explain why fish struggle to survive in warm water.</h4>
+                            <textarea name="quiz4" placeholder="Your explanation..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Quiz
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="recap-section">
+                <div class="section-header">
+                    <i class="fas fa-bookmark"></i>
+                    <h2>Lesson Recap</h2>
+                </div>
+                
+                <div class="recap-content">
+                    <div class="key-points">
+                        <h3>Key Points to Remember:</h3>
+                        <ul>
+                            <li><strong>Temperature:</strong> ↑ for solids, ↓ for gases</li>
+                            <li><strong>Pressure:</strong> Only affects gases - more pressure = more gas dissolves</li>
+                            <li><strong>Nature:</strong> Polarity determines if substances mix</li>
+                            <li>Different rules for solids vs gases!</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="wassce-tip">
+                        <h3><i class="fas fa-graduation-cap"></i> WASSCE Tip</h3>
+                        <p>Always specify whether you're talking about solids or gases when discussing temperature effects. Many students lose marks by saying "solubility increases with temperature" without specifying which type of solute.</p>
+                    </div>
+                    
+                    <div class="next-lesson">
+                        <h3>Ready for the Next Lesson?</h3>
+                        <p>In Lesson 4, we'll explore different types of solutions: saturated, unsaturated, and supersaturated. Learn how to read solubility curves!</p>
+                        <a href="lesson4.html" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i> Continue to Lesson 4
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <script src="../auth.js"></script>
+    <script>
+        function checkAnswers(lessonNumber) {
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'a'
+            };
+            
+            let score = 0;
+            
+            Object.keys(correctAnswers).forEach(q => {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === correctAnswers[q]) {
+                    score++;
+                    selected.parentElement.style.color = 'var(--success-color)';
+                    selected.parentElement.style.fontWeight = 'bold';
+                } else if (selected) {
+                    selected.parentElement.style.color = 'var(--danger-color)';
+                }
+            });
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                trackLessonProgress(lessonNumber);
+            }
+            
+            alert(`You got ${score} out of 3 multiple choice questions correct!`);
+        }
+        
+        let quizTime = 360;
+        const timerElement = document.getElementById('quizTimer');
+        
+        function updateQuizTimer() {
+            const minutes = Math.floor(quizTime / 60);
+            const seconds = quizTime % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (quizTime > 0) {
+                quizTime--;
+            } else {
+                alert('Time\'s up! Please submit your quiz.');
+            }
+        }
+        
+        setInterval(updateQuizTimer, 1000);
+        
+        document.getElementById('lessonQuiz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                alert('Please login to save your quiz results!');
+                return;
+            }
+            
+            const quizData = new FormData(this);
+            console.log('Quiz submitted:', Object.fromEntries(quizData));
+            
+            alert('Quiz submitted successfully! Your answers have been saved.');
+            
+            trackLessonProgress(3);
+            
+            setTimeout(() => {
+                window.location.href = 'lesson4.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

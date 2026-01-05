@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Practical Applications | Chem Master Ghana</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        .application-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border-top: 5px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        .application-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .app-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .ghana-flag {
+            color: #006b3f;
+            font-weight: bold;
+        }
+        .industry-example {
+            background: #fff8e1;
+            border-left: 4px solid #ff8f00;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .success-banner {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .certificate {
+            background: white;
+            border: 3px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-flask"></i>
+                <h1>Chem Master <span class="ghana">Ghana</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../index.html#lessons">Lessons</a>
+                <a href="../index.html#assessments">Assessments</a>
+                <a href="../index.html#glossary">Glossary</a>
+                <div class="auth-buttons" id="authButtons"></div>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="lesson-container">
+        <div class="lesson-header">
+            <div class="lesson-breadcrumb">
+                <a href="../index.html#lessons"><i class="fas fa-arrow-left"></i> Back to Lessons</a>
+            </div>
+            <div class="lesson-title">
+                <span class="lesson-number">Lesson 6</span>
+                <h1>Practical Applications in Daily Life & Industry</h1>
+                <p class="lesson-subtitle">Connecting solubility concepts to real Ghanaian contexts</p>
+            </div>
+            <div class="lesson-meta">
+                <span><i class="fas fa-clock"></i> 25 minutes</span>
+                <span><i class="fas fa-graduation-cap"></i> Advanced Level</span>
+                <span><i class="fas fa-book"></i> WASSCE Topic: Applications of Chemistry</span>
+            </div>
+        </div>
+
+        <div class="lesson-content">
+            <section class="explanation-section">
+                <div class="section-header">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h2>Teacher's Explanation</h2>
+                </div>
+                <div class="teacher-note">
+                    <p>"Why learn solubility? From medicine to mining, solubility matters in Ghana! This lesson connects everything you've learned to real applications you see every day. Chemistry isn't just for exams - it's for understanding and improving our world."</p>
+                </div>
+                
+                <div class="real-life-example">
+                    <h3><i class="fas fa-lightbulb"></i> Ghana's Gold Industry</h3>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="example-text">
+                            <h4>Gold Mining in Ghana</h4>
+                            <p>Ghana is Africa's largest gold producer. Miners use cyanide solutions to dissolve gold from ore (gold is soluble in cyanide). After extraction, they use zinc to precipitate the gold out of solution. This entire process depends on solubility principles!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="concepts-section">
+                <div class="section-header">
+                    <i class="fas fa-key"></i>
+                    <h2>Applications of Solubility in Ghana</h2>
+                </div>
+                
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <h3>Medicine & Healthcare</h3>
+                        <p><strong>Why some medicines are syrups:</strong> Water-soluble drugs are made into syrups for easy absorption.</p>
+                        <p><strong>Why some are tablets:</strong> Fat-soluble vitamins (A, D, E, K) are better absorbed with food.</p>
+                        <p><strong>Ghanaian example:</strong> Paracetamol syrup for children vs. tablets for adults.</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-tractor"></i>
+                        </div>
+                        <h3>Agriculture</h3>
+                        <p><strong>Soluble fertilizers:</strong> Dissolve in water for quick plant uptake.</p>
+                        <p><strong>Slow-release fertilizers:</strong> Less soluble, provide nutrients over time.</p>
+                        <p><strong>Ghanaian example:</strong> NPK fertilizer application in maize farming.</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3>Environmental Science</h3>
+                        <p><strong>Oxygen in water:</strong> Cold water holds more oxygen for fish survival.</p>
+                        <p><strong>Water pollution:</strong> Soluble pollutants spread quickly in water bodies.</p>
+                        <p><strong>Ghanaian example:</strong> Fish survival in the Volta Lake vs. warm ponds.</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Mining & Extraction</h3>
+                        <p><strong>Gold extraction:</strong> Using cyanide solutions (Au soluble in CN⁻).</p>
+                        <p><strong>Bauxite processing:</strong> Using NaOH to extract aluminum.</p>
+                        <p><strong>Ghanaian example:</strong> Gold mines in Obuasi and Tarkwa.</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Household Applications</h3>
+                        <p><strong>Cleaning:</strong> Soap (polar and non-polar parts) removes grease.</p>
+                        <p><strong>Cooking:</strong> Salt and sugar dissolve in water-based foods.</p>
+                        <p><strong>Stain removal:</strong> Different solvents for different stains.</p>
+                    </div>
+                    
+                    <div class="application-card">
+                        <div class="app-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Food & Beverage Industry</h3>
+                        <p><strong>Carbonated drinks:</strong> CO₂ dissolved under pressure.</p>
+                        <p><strong>Chocolate making:</strong> Cocoa soluble in fat, not water.</p>
+                        <p><strong>Ghanaian example:</strong> Cocoa processing in Kumasi.</p>
+                    </div>
+                </div>
+                
+                <div class="industry-example">
+                    <h4><i class="fas fa-industry"></i> Case Study: Ghana's Cocoa Industry</h4>
+                    <p>Cocoa beans contain about 50% cocoa butter (fat). During chocolate making:</p>
+                    <ol>
+                        <li>Cocoa solids are <strong>insoluble in water</strong> - that's why cocoa powder doesn't dissolve completely in milk</li>
+                        <li>Cocoa butter is <strong>soluble in other fats</strong> - that's why chocolate melts in your mouth</li>
+                        <li>The "like dissolves like" rule explains why chocolate coatings don't wash off easily with water</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="diagram-section">
+                <div class="section-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h2>Stain Removal Guide</h2>
+                </div>
+                
+                <div class="diagram-container">
+                    <div class="stain-removal-guide">
+                        <h4>Applying "Like Dissolves Like" at Home</h4>
+                        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+                            <thead>
+                                <tr style="background: var(--primary-color); color: white;">
+                                    <th style="padding: 10px; text-align: left;">Type of Stain</th>
+                                    <th style="padding: 10px; text-align: left;">Polarity</th>
+                                    <th style="padding: 10px; text-align: left;">Best Solvent</th>
+                                    <th style="padding: 10px; text-align: left;">Ghanaian Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td style="padding: 10px;">Grease/Oil</td>
+                                    <td style="padding: 10px;">Non-polar</td>
+                                    <td style="padding: 10px;">Petrol, kerosene</td>
+                                    <td style="padding: 10px;">Palm oil stains</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td style="padding: 10px;">Sugar/Salt</td>
+                                    <td style="padding: 10px;">Polar</td>
+                                    <td style="padding: 10px;">Water</td>
+                                    <td style="padding: 10px;">Sobolo stains</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #ddd;">
+                                    <td style="padding: 10px;">Ink</td>
+                                    <td style="padding: 10px;">Polar</td>
+                                    <td style="padding: 10px;">Alcohol</td>
+                                    <td style="padding: 10px;">Pen stains on uniforms</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px;">Paint</td>
+                                    <td style="padding: 10px;">Depends on type</td>
+                                    <td style="padding: 10px;">Turpentine (oil-based)<br>Water (water-based)</td>
+                                    <td style="padding: 10px;">House painting</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="practice-section">
+                <div class="section-header">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h2>Practice Questions</h2>
+                </div>
+                
+                <div class="questions-container">
+                    <div class="question">
+                        <h4>Question 1: Why are some medicines in syrup form?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q1" value="a">
+                                Because syrups taste better
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="b">
+                                <strong>Because water-soluble drugs are easily absorbed</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q1" value="c">
+                                Because syrups are cheaper
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 2: How does solubility affect fish in warm water?</h4>
+                        <div class="options">
+                            <label>
+                                <input type="radio" name="q2" value="a">
+                                Warm water has more oxygen
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="b">
+                                <strong>Warm water holds less oxygen, fish struggle</strong>
+                            </label>
+                            <label>
+                                <input type="radio" name="q2" value="c">
+                                Temperature doesn't affect oxygen solubility
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 3: What principle is used in dry cleaning?</h4>
+                        <textarea placeholder="Your answer... (Example: Like dissolves like rule)"></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 4: Why do miners use cyanide solutions?</h4>
+                        <textarea placeholder="Your answer..."></textarea>
+                    </div>
+                    
+                    <div class="question">
+                        <h4>Question 5: How does solubility relate to fertilizer application?</h4>
+                        <textarea placeholder="Your answer..."></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="checkAnswers(6)">
+                        <i class="fas fa-check-circle"></i> Check Your Answers
+                    </button>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <div class="section-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>Final Quiz</h2>
+                </div>
+                
+                <div class="quiz-container">
+                    <div class="quiz-timer">
+                        <i class="fas fa-stopwatch"></i>
+                        <span>Time: <span id="quizTimer">08:00</span></span>
+                    </div>
+                    
+                    <form id="lessonQuiz">
+                        <div class="quiz-question">
+                            <h4>1. Give two practical applications of solubility in Ghana.</h4>
+                            <textarea name="quiz1" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>2. Why is oxygen solubility important for aquatic life in Ghana?</h4>
+                            <div class="options">
+                                <label>
+                                    <input type="radio" name="quiz2" value="a">
+                                    Oxygen helps fish see better
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="b">
+                                    <strong>Fish need dissolved oxygen to breathe</strong>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz2" value="c">
+                                    Oxygen makes water taste better
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>3. How is the "like dissolves like" rule used in stain removal?</h4>
+                            <textarea name="quiz3" placeholder="Your explanation..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>4. Explain why Ghana's gold mining industry depends on solubility.</h4>
+                            <textarea name="quiz4" placeholder="Your explanation..."></textarea>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <h4>5. How does temperature affect medicine storage in hot Ghanaian climate?</h4>
+                            <textarea name="quiz5" placeholder="Your answer..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> Submit Final Quiz
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="recap-section">
+                <div class="section-header">
+                    <i class="fas fa-bookmark"></i>
+                    <h2>Course Completion!</h2>
+                </div>
+                
+                <div class="success-banner">
+                    <h2><i class="fas fa-trophy"></i> Congratulations!</h2>
+                    <p>You have successfully completed all 6 lessons on Solubility!</p>
+                    <p>You now understand solubility from basic concepts to real-world applications in Ghana.</p>
+                </div>
+                
+                <div class="certificate">
+                    <h3><i class="fas fa-award"></i> Solubility Mastery Certificate</h3>
+                    <p>Upon completing all assessments, you will receive a certificate of completion.</p>
+                    <p>You have learned:</p>
+                    <ul style="text-align: left; display: inline-block; margin: 20px 0;">
+                        <li>✓ Basic concepts of solubility</li>
+                        <li>✓ Polarity and "like dissolves like" rule</li>
+                        <li>✓ Factors affecting solubility</li>
+                        <li>✓ Types of solutions and solubility curves</li>
+                        <li>✓ Solubility rules and precipitation</li>
+                        <li>✓ Real-world applications in Ghana</li>
+                    </ul>
+                    <div style="margin: 30px 0;">
+                        <a href="../index.html#assessments" class="btn btn-primary btn-large">
+                            <i class="fas fa-file-alt"></i> Take Final Assessments
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <h4><i class="fas fa-clipboard-check"></i> Take Assessments</h4>
+                            <p>Complete the two assessment tests to test your knowledge.</p>
+                        </div>
+                        <div class="step">
+                            <h4><i class="fas fa-book"></i> Review Glossary</h4>
+                            <p>Review the 15 key terms to solidify your understanding.</p>
+                        </div>
+                        <div class="step">
+                            <h4><i class="fas fa-graduation-cap"></i> WASSCE Preparation</h4>
+                            <p>Apply your knowledge to past exam questions.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="../index.html" class="btn btn-secondary">
+                            <i class="fas fa-home"></i> Return to Homepage
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../script.js"></script>
+    <script src="../auth.js"></script>
+    <script>
+        function checkAnswers(lessonNumber) {
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'b'
+            };
+            
+            let score = 0;
+            
+            Object.keys(correctAnswers).forEach(q => {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === correctAnswers[q]) {
+                    score++;
+                    selected.parentElement.style.color = 'var(--success-color)';
+                    selected.parentElement.style.fontWeight = 'bold';
+                } else if (selected) {
+                    selected.parentElement.style.color = 'var(--danger-color)';
+                }
+            });
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user) {
+                trackLessonProgress(lessonNumber);
+                // Mark course as completed
+                if (!user.coursesCompleted) {
+                    user.coursesCompleted = [];
+                }
+                if (!user.coursesCompleted.includes('solubility')) {
+                    user.coursesCompleted.push('solubility');
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    
+                    // Update in users array
+                    const users = JSON.parse(localStorage.getItem('users')) || [];
+                    const userIndex = users.findIndex(u => u.email === user.email);
+                    if (userIndex !== -1) {
+                        users[userIndex] = user;
+                        localStorage.setItem('users', JSON.stringify(users));
+                    }
+                }
+            }
+            
+            alert(`You got ${score} out of 2 multiple choice questions correct! Course completion recorded.`);
+        }
+        
+        let quizTime = 480;
+        const timerElement = document.getElementById('quizTimer');
+        
+        function updateQuizTimer() {
+            const minutes = Math.floor(quizTime / 60);
+            const seconds = quizTime % 60;
+            timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (quizTime > 0) {
+                quizTime--;
+            } else {
+                alert('Time\'s up! Please submit your quiz.');
+            }
+        }
+        
+        setInterval(updateQuizTimer, 1000);
+        
+        document.getElementById('lessonQuiz').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (!user) {
+                alert('Please login to save your quiz results and receive your certificate!');
+                return;
+            }
+            
+            const quizData = new FormData(this);
+            console.log('Final quiz submitted:', Object.fromEntries(quizData));
+            
+            alert('Congratulations! You have completed the entire Solubility course. Your certificate of completion is now available.');
+            
+            trackLessonProgress(6);
+            
+            // Show certificate
+            setTimeout(() => {
+                window.location.href = '../index.html#assessments';
+            }, 3000);
+        });
+        
+        // Check if all lessons are completed
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = JSON.parse(localStorage.getItem('currentUser'));
+            if (user && user.progress && user.progress.lessonsCompleted) {
+                const completedLessons = user.progress.lessonsCompleted;
+                if (completedLessons.length === 6) {
+                    // All lessons completed
+                    console.log('All lessons completed!');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
